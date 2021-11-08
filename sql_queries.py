@@ -12,8 +12,8 @@ songplay_table_create = (""" CREATE TABLE IF NOT EXISTS songplays ( songplay_id 
                                                                    start_time BIGINT NOT NULL, \
                                                                    user_id INT NOT NULL, \
                                                                    level VARCHAR, \
-                                                                   song_id VARCHAR NOT NULL, \
-                                                                   artist_id VARCHAR NOT NULL, \
+                                                                   song_id VARCHAR, \
+                                                                   artist_id VARCHAR, \
                                                                    session_id INT, \
                                                                    location VARCHAR, \
                                                                    user_agent VARCHAR);
