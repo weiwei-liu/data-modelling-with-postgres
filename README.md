@@ -39,13 +39,14 @@ What are the top 10 songs users are listening to?
     SELECT s.title, count(sp.song_id) as counts
     FROM songplays sp
     JOIN songs s ON sp.song_id=s.song_id
-    GROUP BY sp.song_id
+    GROUP BY s.title
     ORDER BY counts DESC
     LIMIT 10
 
 What are the usual hours when users listen to music?
 
     SELECT hour, count(hour) as counts
-    FROM time  
+    FROM time
+    GROUP BY hour  
     ORDER BY counts DESC
     LIMIT 5
